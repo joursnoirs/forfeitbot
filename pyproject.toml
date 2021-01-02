@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "forfeitbot"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "A simple bot written in Python"
+authors = ["Max Thomas <undeadmax1313@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"

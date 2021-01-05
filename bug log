@@ -1,0 +1,20 @@
+randomly goes to r/venn for whatever fucking reason
+
+
+
+
+
+
+@bot.command()
+async def meme(ctx,  subreddit: str = ""):
+		async with ctx.channel.typing():
+				reddit = praw.Reddit(
+				client_id=REDDIT_APP_ID,
+				client_secret=REDDIT_APP_SECRET,
+				user_agent="ForfeitBot by Mæx#1313 v1.0")
+				
+				sub_to_pick = REDDIT_MEME_SUBS[random.randint(1,17)]
+				
+				post_to_pick = reddit.subreddit(sub_to_pick).hot(limit=10)
+				await ctx.send('This post came from ' + ((post_to_pick).url))
+				await ctx.send(next(post_to_pick).url)
